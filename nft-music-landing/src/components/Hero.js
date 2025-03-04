@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 
 const Hero = () => {
@@ -44,36 +44,34 @@ const Hero = () => {
           transition={{ duration: 1 }}
           className="mb-8"
         >
-          <motion.h1 
+          <motion.h1
             className="text-6xl md:text-8xl font-extrabold hero-text"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            transition={{ 
+            transition={{
               duration: 1.2,
               type: "spring",
-              stiffness: 100
+              stiffness: 100,
             }}
           >
-            <motion.span 
-              className="text-white"
-              animate={{ 
-                textShadow: [
-                  "0 0 10px rgba(255, 0, 0, 0.5), 0 0 20px rgba(255, 0, 0, 0.3)",
-                  "0 0 15px rgba(255, 0, 0, 0.7), 0 0 30px rgba(255, 0, 0, 0.5)",
-                  "0 0 10px rgba(255, 0, 0, 0.5), 0 0 20px rgba(255, 0, 0, 0.3)"
-                ]
+            {/* ロゴ画像を表示 */}
+            <motion.img
+              src="/nftmusic.png" // ここを実際のロゴ画像のパスに変更してください
+              alt="NFT MUSIC Logo"
+              className="mx-auto"
+              animate={{
+                // 例として、微妙な拡大縮小のアニメーションを追加する場合
+                
               }}
               transition={{
                 duration: 2,
                 repeat: Infinity,
-                repeatType: "reverse"
+                repeatType: "reverse",
               }}
-            >
-              NFT <span className="text-primary">MUSIC</span>
-            </motion.span>
+            />
           </motion.h1>
-          
-          <motion.p 
+
+          <motion.p
             className="mt-8 text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -82,7 +80,7 @@ const Hero = () => {
             人脈や運を必要としない公平な音楽市場を創るプロジェクト
           </motion.p>
         </motion.div>
-        
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -92,9 +90,6 @@ const Hero = () => {
             Discover More
           </a>
         </motion.div>
-        
-        
-          
       </div>
     </section>
   );

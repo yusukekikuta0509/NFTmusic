@@ -19,8 +19,12 @@ const Navbar = () => {
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-black bg-opacity-80 backdrop-blur-sm py-3' : 'bg-transparent py-5'}`}>
       <div className="container flex justify-between items-center">
-        <a href="#" className="text-2xl font-bold text-white flex items-center">
-          <span className="text-primary mr-1">NFT</span>MUSIC
+        <a href="#" className="flex items-center">
+          <img
+            src="/nftmusic.png" // ロゴ画像のパスに変更してください
+            alt="NFT MUSIC Logo"
+            className="h-10 w-auto mr-1" // 適宜サイズを調整してください
+          />
         </a>
         
         <div className="hidden md:flex space-x-8">

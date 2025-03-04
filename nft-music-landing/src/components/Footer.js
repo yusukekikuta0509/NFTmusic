@@ -8,9 +8,13 @@ const Footer = () => {
       <div className="container">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
-            <a href="#" className="text-2xl font-bold text-white flex items-center">
-              <span className="text-primary mr-1">NFT</span>MUSIC
-            </a>
+          <a href="#" className="flex items-center">
+          <img
+            src="/nftmusic.png" // ロゴ画像のパスに変更してください
+            alt="NFT MUSIC Logo"
+            className="h-10 w-auto mr-1" // 適宜サイズを調整してください
+          />
+        </a>
             <p className="text-gray-400 mt-2">Revolutionizing music investment through NFTs</p>
           </div>
           
